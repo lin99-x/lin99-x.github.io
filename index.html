@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jinglin Gao</title>
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Press+Start+2P&display=swap" rel="stylesheet">  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
+</head>
+
+<body>
+  <script src="js/theme-toggle.js" defer></script>
+  <script src="js/nav.js" defer></script>
+  <header id="main-header" class="header">
+    <nav>
+      <i class="fas fa-fire logo"></i>
+      <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#" data-section="intro" class="active">Home</a></li>
+        <li><a href="#" data-section="about">About</a></li>
+        <li><a href="#" data-section="projects">Projects</a></li>
+        <li><a href="CV.pdf" target="_blank">Resume</a></li>
+        <li><a href="#" data-section="contact">Contact</a></li>
+        <li><a href="https://github.com/lin99-x" target="_blank">GitHub</a></li>
+      </ul>
+      <button id="themeToggle" aria-label="Toggle Theme" class="theme-toggle">
+        <i id="themeIcon" class="fas fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+<section class="section intro active" id="intro">
+    <h1>Jinglin Gao</h1>
+    
+
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/jinglingao/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/lin99-x" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <img id="coffeeImage" src="assets/coffee-no-background.png" alt="coffee" class="intro-image">
+
+    <div class="intro-stats-bottom">
+      <div class="stat-item">
+        <span class="stat-number">3+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">10+</span>
+        <span class="stat-label">Technologies</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">10+</span>
+        <span class="stat-label">Projects</span>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section about" id="about">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>I'm Jinglin, a Full-stack Developer focused on building scalable backend systems and cloud-native applications. I enjoy solving complex engineering problems and continuously exploring new technologies, including AI-driven solutions.
+      </p>
+      <ul class="skills-list">
+          <li>Strong experience in Python/Java for backend development, data processing, and distributed systems</li>
+          <li>Focused on AWS and cloud infrastructure, with hands-on experience in building and operating scalable services</li>
+          <li>Proficient in SQL and NoSQL databases, with an emphasis on performance and data modeling</li>
+          <li>Familiar with integrating AI tools and building automation workflows using LLM-based agents</li>
+          <li>Experience in parallel and high-performance computing (C, OpenMP, OpenMPI)</li>
+          <li>Independent Photographer | Traveler</li>
+          <li>Badminton | Volleyball | Casual Gamer</li>
+      </ul>
+      <a href="CV.pdf" target="_blank" class="resume-btn">Resume -></a>
+    </div>
+    <div>
+      <img src="assets/about-me.jpg" alt="Jinglin Gao" class="about-image">
+    </div>
+  </section>
+
+  <section class="section projects" id="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-carousel">
+
+      <div class="project-card active" data-project="0">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Document Processor</h3>
+            <p>A FastAPI-based document processing backend that extracts text from PDFs and uses local AI (Ollama) to generate summaries, keywords, and analysis. Features PostgreSQL database storage and a retro pixel art web interface.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Ollama</span>
+              <span class="tech-tag">Docker</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/lin99-x/document-processor" class="project-link">
+                <i class="fab fa-github"></i>
+                Code
+              </a>
+            </div>
+          </div>
+          <div class="project-image-container">
+            <img src="assets/projects/document-processor.png" alt="Document Processor Demo" class="project-image">
+            <div class="project-nav">
+              <button class="carousel-btn prev" onclick="changeProject(-1)">&#10094; Prev</button>
+              <button class="carousel-btn next" onclick="changeProject(1)">Next &#10095;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-project="1">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>NeuralCT-Compress: Implicit Neural Compression for 3D Medical Imaging</h3>
+            <p>Advanced 3D medical imaging compression framework combining Implicit Neural Representations (INRs) and Convolutional Neural Networks for efficient storage and processing of high-resolution micro-CT data. Achieves significant compression ratios while maintaining diagnostic quality and enabling seamless integration with downstream medical analysis pipelines.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pytorch</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/lin99-x/inr-3d-medical-compression" class="project-link">
+                <i class="fab fa-github"></i>
+                Code
+              </a>
+            </div>
+          </div>
+          <div class="project-image-container">
+            <img src="assets/projects/neuralCT.jpg" alt="Project Preview" class="project-image">
+            <div class="project-nav">
+              <button class="carousel-btn prev" onclick="changeProject(-1)">&#10094; Prev</button>
+              <button class="carousel-btn next" onclick="changeProject(1)">Next &#10095;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-project="2">
+        <div class="project-content">
+          <div class="project-text">
+            <h3>Strassen-HPC: High-Performance Matrix Multiplication</h3>
+            <p>Advanced implementation of Strassen's matrix multiplication algorithm featuring both serial and parallel versions. Achieves O(n^2.807) complexity through divide-and-conquer optimization, with multi-core parallelization for enhanced performance in computational linear algebra applications.</p>
+            <div class="project-tech">
+              <span class="tech-tag">C</span>
+              <span class="tech-tag">OpenMP</span>
+              <span class="tech-tag">Algorithm Optimazation</span>
+              <span class="tech-tag">Multi-threading</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/lin99-x/StrassenAlgorithmParallel" class="project-link">
+                <i class="fab fa-github"></i>
+                Code
+              </a>
+            </div>
+          </div>
+          <div class="project-image-container">
+            <img src="assets/projects/strassen-hpc.png" alt="Project Preview" class="project-image">
+            <div class="project-nav">
+              <button class="carousel-btn prev" onclick="changeProject(-1)">&#10094; Prev</button>
+              <button class="carousel-btn next" onclick="changeProject(1)">Next &#10095;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="project-dots">
+      <span class="dot active" onclick="goToProject(0)"></span>
+      <span class="dot" onclick="goToProject(1)"></span>
+      <span class="dot" onclick="goToProject(2)"></span>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2>Get In Touch</h2>
+    <div class="contact-container">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <span class="contact-label">Email</span>
+        <div class="contact-value">
+          <span id="emailText">jinglin.gao@hotmail.com</span>
+          <button class="copy-btn" onclick="copyToClipboard('jinglin.gao@hotmail.com', this)" aria-label="Copy email">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <span class="contact-label">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/jinglingao/" target="_blank" class="contact-link">
+          linkedin.com/in/jinglingao
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <span class="contact-label">Phone</span>
+        <div class="contact-value">
+          <span id="phoneText">+46 79 357 2168</span>
+          <button class="copy-btn" onclick="copyToClipboard('+46762345678', this)" aria-label="Copy phone">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="contact-message">
+      <p>Feel free to reach out for collaborations, questions, or just to say hi!</p>
+    </div>
+  </section>
+
+</body>
+</html>
