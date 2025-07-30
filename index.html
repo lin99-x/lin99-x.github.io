@@ -1,30 +1,69 @@
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
-  <base target="_blank">
   <meta charset="UTF-8" />
-  <title>Anon Developer</title>
+  <title>Jinglin Gao</title>
   <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
   <!-- remember, jQuery is completely optional -->
   <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
-  <script type="text/javascript" src="js/jquery.particleground.js"></script>
-  <script type="text/javascript" src="js/demo.js"></script>
+  <!-- <script type="text/javascript" src="js/jquery.particleground.js"></script>
+  <script type="text/javascript" src="js/demo.js"></script> -->
 </head>
 
 <body>
+  <script src="js/theme-toggle.js" defer></script>
+  <header id="main-header">
+    <nav>
+      <i class="fas fa-fire" style="font-size: 2em;"></i>
+      <ul class="nav-links">
+        <li><a href="#intro">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="CV_swe1.pdf">Resume</a></li>
+        <li><a href="https://github.com/lin99-x">GitHub</a></li>
+      </ul>
+      <button id="themeToggle" aria-label="Toggle Theme">
+        <i id="themeIcon" class="fas fa-moon"></i>
+      </button>
+    </nav>
+  </header>
 
-<div id="particles">
   <div id="intro">
-      <h2 style="font-family: 'Syncopate', sans-serif; font-weight: 10;">Anon Developer&nbsp<a href="CV_swe1.pdf" style="color: white;"><img src="https://png.icons8.com/office/40/000000/open-resume.png" height="35" width="35"></a></h2>
-        <hr style="width: 50%; background-color: #E83951; border-color: #E83951;">
-    <a href="https://www.linkedin.com/in/jinglingao/" style="color: white;"><i class="fab fa-linkedin" style="font-size: 2em;"></i></a>
+      <h2 style="font-family: 'Playfair Display', sans-serif; font-weight: 700; font-size: 40px;">Jinglin Gao&nbsp</h2>
+      <p class="motto">Do not go gentle into that good night.</p>  
+      <hr style="width: 50%; background-color: #E83951; border-color: #E83951;">
+    <a href="https://www.linkedin.com/in/jinglingao/" class="linkedin-btn"><i class="fab fa-linkedin" style="font-size: 2em;"></i></a>
     &nbsp
-    <a href="https://github.com/lin99-x" style="color: white;"><i class="fab fa-github" style="font-size: 2em;"></i></a>
+    <a href="https://github.com/lin99-x" class="git-btn"><i class="fab fa-github" style="font-size: 2em;"></i></a>
+    <div class="intro-picture">
+      <img id="coffeeImage" src="assets/coffee-no-background.png" alt="coffee">
+    </div>
   </div>
-</div>
+
+  <div id="about" class="section">
+    <div class="about-picture">
+      <img src="assets/about-me.jpg" alt="Jinglin Gao">
+    </div>
+    <div class="about-text">
+      <h2 style="font-family: monospace; font-size: 30px; font-weight: 500">About Me</h2>
+      <p>
+        I’m Jinglin, a Full-stack Developer @ Recap Power.
+      </p>
+        <ul class="skills-list">
+          <li>✓ Years of experience in Python</li>
+          <li>✓ Focusing on AWS, Cloud infrastructure</li>
+          <li>✓ Familiar with SQL | NoSQL</li>
+          <li>✓ Experience in parallel computing with C | OpenMP | OpenMPI</li>
+          <li>✓ Independent Photographer | Traveler</li>
+          <li>✓ Badminton | Volleyball | Casual Gamer</li>
+      </ul>
+      <!-- Resume Button -->
+      <a href="CV_swe1.pdf" target="_blank" class="resume-btn" role="button" aria-label="Resume ->">Resume -></a>
+    </div>
+  </div>
 
 </body>
 </html>
