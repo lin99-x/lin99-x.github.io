@@ -4,66 +4,104 @@
   <meta charset="UTF-8" />
   <title>Jinglin Gao</title>
   <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
-  <!-- remember, jQuery is completely optional -->
-  <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
-  <!-- <script type="text/javascript" src="js/jquery.particleground.js"></script>
-  <script type="text/javascript" src="js/demo.js"></script> -->
 </head>
 
 <body>
   <script src="js/theme-toggle.js" defer></script>
-  <header id="main-header">
+  <header id="main-header" class="header">
     <nav>
-      <i class="fas fa-fire" style="font-size: 2em;"></i>
+      <i class="fas fa-fire logo"></i>
       <ul class="nav-links">
         <li><a href="#intro">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="CV_swe1.pdf">Resume</a></li>
-        <li><a href="https://github.com/lin99-x">GitHub</a></li>
+        <li><a href="projects">Projects</a></li>
+        <li><a href="CV_swe1.pdf" target="_blank">Resume</a></li>
+        <li><a href="https://github.com/lin99-x" target="_blank">GitHub</a></li>
       </ul>
-      <button id="themeToggle" aria-label="Toggle Theme">
+      <button id="themeToggle" aria-label="Toggle Theme" class="theme-toggle">
         <i id="themeIcon" class="fas fa-moon"></i>
       </button>
     </nav>
   </header>
 
-  <div id="intro">
-      <h2 style="font-family: 'Playfair Display', sans-serif; font-weight: 700; font-size: 40px;">Jinglin Gao&nbsp</h2>
-      <p class="motto">Do not go gentle into that good night.</p>  
-      <hr style="width: 50%; background-color: #E83951; border-color: #E83951;">
-    <a href="https://www.linkedin.com/in/jinglingao/" class="linkedin-btn"><i class="fab fa-linkedin" style="font-size: 2em;"></i></a>
-    &nbsp
-    <a href="https://github.com/lin99-x" class="git-btn"><i class="fab fa-github" style="font-size: 2em;"></i></a>
-    <div class="intro-picture">
-      <img id="coffeeImage" src="assets/coffee-no-background.png" alt="coffee">
-    </div>
-  </div>
+  <section class="section intro" id="intro">
+    <h1>Jinglin Gao</h1>
+    <p class="motto">Do not go gentle into that good night.</p>  
 
-  <div id="about" class="section">
-    <div class="about-picture">
-      <img src="assets/about-me.jpg" alt="Jinglin Gao">
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/jinglingao/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/lin99-x" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
+    
+    <img id="coffeeImage" src="assets/coffee-no-background.png" alt="coffee" class="intro-image">
+  </section>
+
+
+  <section class="section about" id="about">
     <div class="about-text">
-      <h2 style="font-family: monospace; font-size: 30px; font-weight: 500">About Me</h2>
+      <h2>About Me</h2>
       <p>
-        I’m Jinglin, a Full-stack Developer @ Recap Power.
+        I’m Jinglin, a Full-stack Developer, passionate about creating innovative solutions and exploring new technologies.
       </p>
-        <ul class="skills-list">
-          <li>✓ Years of experience in Python</li>
-          <li>✓ Focusing on AWS, Cloud infrastructure</li>
-          <li>✓ Familiar with SQL | NoSQL</li>
-          <li>✓ Experience in parallel computing with C | OpenMP | OpenMPI</li>
-          <li>✓ Independent Photographer | Traveler</li>
-          <li>✓ Badminton | Volleyball | Casual Gamer</li>
+      <ul class="skills-list">
+          <li>Years of experience in Python</li>
+          <li>Focusing on AWS, Cloud infrastructure</li>
+          <li>Familiar with SQL | NoSQL</li>
+          <li>Experience in parallel computing with C | OpenMP | OpenMPI</li>
+          <li>Independent Photographer | Traveler</li>
+          <li>Badminton | Volleyball | Casual Gamer</li>
       </ul>
-      <!-- Resume Button -->
-      <a href="CV_swe1.pdf" target="_blank" class="resume-btn" role="button" aria-label="Resume ->">Resume -></a>
+      <a href="CV_swe1.pdf" target="_blank" class="resume-btn">Resume -></a>
     </div>
-  </div>
+    <div>
+      <img src="assets/about-me.jpg" alt="Jinglin Gao" class="about-image">
+    </div>
+  </section>
+
+  <section class="section projects" id="projects">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+      <article class="project-card">
+        <h3>NeuralCT-Compress: Implicit Neural Compression for 3D Medical Imaging</h3>
+        <p>Advanced 3D medical imaging compression framework combining Implicit Neural Representations (INRs) and Convolutional Neural Networks for efficient storage and processing of high-resolution micro-CT data. Achieves significant compression ratios while maintaining diagnostic quality and enabling seamless integration with downstream medical analysis pipelines.</p>
+        <div class="project-tech">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Pytorch</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/lin99-x/inr-3d-medical-compression" class="project-link">
+            <i class="fab fa-github"></i>
+            Code
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <h3>Strassen-HPC: High-Performance Matrix Multiplication</h3>
+        <p>Advanced implementation of Strassen's matrix multiplication algorithm featuring both serial and parallel versions. Achieves O(n^2.807) complexity through divide-and-conquer optimization, with multi-core parallelization for enhanced performance in computational linear algebra applications.</p>
+        <div class="project-tech">
+          <span class="tech-tag">C</span>
+          <span class="tech-tag">OpenMP</span>
+          <span class="tech-tag">Algorithm Optimazation</span>
+          <span class="tech-tag">Multi-threading</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/lin99-x/StrassenAlgorithmParallel" class="project-link">
+            <i class="fab fa-github"></i>
+            Code
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
 
 </body>
 </html>
