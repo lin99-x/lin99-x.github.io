@@ -6,20 +6,20 @@
 }
 
 :root {
-  /* Stardew Valley Warm Palette */
-  --primary-bg: #5c4033;
-  --secondary-bg: #8b6914;
-  --accent-color: #f58f29;
-  --accent-green: #639b2c;
-  --accent-brown: #3d2314;
-  --text-primary: #f5e6c8;
-  --text-secondary: #d4a86a;
-  --card-bg: #3d2314;
-  --border-color: #8b5a2b;
-  --hover-bg: #5a3d20;
+  /* Stardew Valley Winter/Festival Palette */
+  --primary-bg: #2d3748;
+  --secondary-bg: #4a5568;
+  --accent-color: #ffd700;
+  --accent-green: #48bb78;
+  --accent-brown: #1a202c;
+  --text-primary: #e2e8f0;
+  --text-secondary: #a0aec0;
+  --card-bg: #2d3748;
+  --border-color: #4a5568;
+  --hover-bg: #374151;
   --gold: #ffd700;
-  --sky: #87ceeb;
-  --grass: #7ec850;
+  --sky: #90cdf4;
+  --grass: #68d391;
 
   /* Fonts */
   --font-pixel: 'Press Start 2P', cursive;
@@ -33,17 +33,19 @@
 
 /* Light Theme */
 body.light-theme {
-  --primary-bg: #f4e4bc;
-  --secondary-bg: #d4a86a;
-  --accent-color: #8b4513;
-  --accent-green: #4a7c23;
-  --accent-brown: #5c3d2e;
-  --text-primary: #3d2314;
-  --text-secondary: #5c3d2e;
-  --card-bg: #f4e4bc;
-  --border-color: #c9a66b;
-  --hover-bg: #e8d4a8;
-  --gold: #b8860b;
+  --primary-bg: #f7fafc;
+  --secondary-bg: #e2e8f0;
+  --accent-color: #2d3748;
+  --accent-green: #2f855a;
+  --accent-brown: #4a5568;
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+  --card-bg: #ffffff;
+  --border-color: #cbd5e0;
+  --hover-bg: #edf2f7;
+  --gold: #d69e2e;
+  --sky: #90cdf4;
+  --grass: #68d391;
 }
 
 body {
@@ -203,6 +205,14 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
+.intro-subtitle {
+  font-family: var(--font-pixel);
+  font-size: clamp(0.5rem, 1.5vw, 0.8rem);
+  color: var(--text-secondary);
+  text-shadow: 2px 2px 0 var(--accent-brown);
+  margin-bottom: 2rem;
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -228,6 +238,12 @@ body {
   padding: 1rem;
   background: var(--card-bg);
   border: 3px solid var(--border-color);
+  border-radius: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.1s;
 }
 
@@ -453,24 +469,18 @@ body {
   background: var(--accent-brown);
 }
 
-/* Carousel */
-.project-carousel {
+/* Project List */
+.project-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+  gap: 3rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.project-carousel .project-card {
-  display: none;
-  width: 100%;
-}
-
-.project-carousel .project-card.active {
+.project-list .project-card {
   display: block;
-  animation: fadeIn 0.3s ease;
+  width: 100%;
 }
 
 .project-content {
