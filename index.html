@@ -92,6 +92,34 @@
       <div class="project-card">
         <div class="project-content">
           <div class="project-text">
+            <h3>Electricity Price Tracker</h3>
+            <p>Built a full-stack serverless app on GCP processing real-time Swedish electricity spot prices across 4 market zones. Stack includes a FastAPI backend on Cloud Run (auto-scaling), a React frontend, and a BigQuery pipeline with MERGE/upsert patterns for 15-minute granularity data. A sliding-window algorithm identifies the cheapest charging windows, delivered via REST API to an interactive dashboard. CI/CD automated with Cloud Build and multi-stage Docker builds.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">BigQuery</span>
+              <span class="tech-tag">Cloud Run</span>
+              <span class="tech-tag">Cloud Functions</span>
+              <span class="tech-tag">GCP</span>
+            </div>
+            <div class="project-links">
+              <a href="https://frontend-411310706725.europe-north1.run.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+          <div class="project-image-container">
+            <img src="assets/projects/electricity-tracker.png" alt="Electricity Price Tracker Demo" class="project-image">
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-content">
+          <div class="project-text">
             <h3>Document Processor</h3>
             <p>A FastAPI-based document processing backend that extracts text from PDFs and uses local AI (Ollama) to generate summaries, keywords, and analysis. Features PostgreSQL database storage and a retro pixel art web interface.</p>
             <div class="project-tech">
